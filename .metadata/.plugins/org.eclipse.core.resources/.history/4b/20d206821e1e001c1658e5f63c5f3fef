@@ -1,0 +1,10 @@
+package bf.lonab.banque.audits;
+
+import javax.persistence.EntityListeners;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+@EntityListeners
+public class DataAudit {
+
+}

@@ -1,0 +1,7 @@
+package bf.lonab.banque.securites;
+
+public class JwtAuthenticationResponse {
+
+	 private String accessToken;
+	 private String tokenType= "bearer";
+}

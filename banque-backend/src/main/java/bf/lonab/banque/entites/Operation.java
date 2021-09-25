@@ -1,6 +1,5 @@
 package bf.lonab.banque.entites;
 
-import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorType;
@@ -33,7 +32,6 @@ import lombok.Setter;
 })
 public class Operation  extends AbstractEntity{
 	private static final long serialVersionUID = 1L;
-	private Date dateCreation;
 	private double montant;
 	@Column(name="Type_Operation", insertable = false, updatable = false)
 	private String type;

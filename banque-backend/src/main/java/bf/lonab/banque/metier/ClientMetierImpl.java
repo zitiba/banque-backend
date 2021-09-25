@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 @Service
 @AllArgsConstructor
 public class ClientMetierImpl implements IClientMetier{
+	
 	 private ClientRepository clientRepository;
 	 
 	@Override

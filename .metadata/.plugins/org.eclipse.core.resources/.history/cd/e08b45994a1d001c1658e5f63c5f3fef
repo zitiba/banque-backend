@@ -1,0 +1,26 @@
+package bf.lonab.banque.securites;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import bf.lonab.banque.dao.EmployeRepository;
+
+@Service
+public class EmployeDetailService implements UserDetailsService   {
+    @Autowired
+	EmployeRepository employeRepository;
+    
+    @Override 
+    @Transactional
+	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    	Employe emp=employeRepository.findByEmail(email).orElseThrow()-> new UsernameNotFoundException("Utilisateur non disponible: "+email);
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

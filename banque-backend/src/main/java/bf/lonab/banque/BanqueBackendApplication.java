@@ -1,17 +1,24 @@
 package bf.lonab.banque;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.TimeZone;
+import javax.annotation.PostConstruct;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import bf.lonab.banque.dao.CompteRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.convert.Jsr310Converters;
+
 
 
 @SpringBootApplication
+@EntityScan(basePackageClasses = {BanqueBackendApplication.class,Jsr310Converters.class})
 public class BanqueBackendApplication implements CommandLineRunner {
 	
-	@Autowired
-	private CompteRepository compteRepository;
+	@PostConstruct
+	void init() {
+		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+	}
+	
 	
 	public static void main(String[] args) {
 		SpringApplication.run(BanqueBackendApplication.class, args);

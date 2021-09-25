@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.5</version>
+		<parent derecherche relativePath />  <!-- à partir du référentiel --> 
+	</parent>
+	<groupId>bf.lonab</groupId>
+	<artifactId>banque</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<nom>banque-backend</nom>
+	<description>Formation Spring </description>
+	<Propriétés>
+		<java.version>11</java.version>
+	</Propriétés>
+	<Dépendances>
+		<dépendance>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dépendance>
+		<dépendance>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dépendance>
+		<dépendance>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-hal-explorer</artifactId>
+		</dépendance>
+
+		<dépendance>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<étendue>exécution</étendue>
+		</dépendance>
+		<dépendance>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<étendue>exécution</étendue>
+		</dépendance>
+		<dépendance>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<facultatif>true</facultatif>
+		</dépendance>
+		<dépendance>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<champ d’application>test</champd’application>
+		</dépendance>
+	</Dépendances>
+
+	<construire>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<Exclut>
+						<exclure>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclure>
+					</Exclut>
+				</configuration>
+			</plugin>
+		</plugins>
+	</construire>
+
+</projet>

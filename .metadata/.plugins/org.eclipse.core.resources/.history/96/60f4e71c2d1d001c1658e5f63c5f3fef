@@ -1,0 +1,11 @@
+package bf.lonab.banque.entites;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+public class Roles extends AbstractEntity {
+
+	 private NomRoles nomRole;
+}

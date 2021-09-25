@@ -1,0 +1,14 @@
+package bf.lonab.banque.audits;
+
+import javax.persistence.EntityListeners;
+import javax.persistence.MappedSuperclass;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+@JsonIgnoreProperties
+public class DataAudit {
+
+}

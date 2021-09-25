@@ -1,0 +1,17 @@
+package bf.lonab.banque.entites;
+
+import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class Roles extends AbstractEntity {
+	 
+	private static final long serialVersionUID = 1L;
+	private NomRoles nomRole;
+}

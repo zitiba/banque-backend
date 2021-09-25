@@ -1,0 +1,5 @@
+package bf.lonab.banque.exceptions;
+
+public class InvalidBanqueBackendExceptions {
+
+}

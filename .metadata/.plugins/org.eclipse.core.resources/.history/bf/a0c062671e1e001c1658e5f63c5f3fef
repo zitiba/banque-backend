@@ -1,0 +1,8 @@
+package bf.lonab.banque.audits;
+
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+public class DataAudit {
+
+}

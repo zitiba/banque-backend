@@ -1,0 +1,36 @@
+package bf.lonab.banque.entites;
+
+import javax.persistence.Entity;
+import javax.persistence.PrePersist;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+@Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Employe extends AbstractEntity{
+	private static final long serialVersionUID = 1L;
+	
+	@NotBlank
+	@Size(max=20)
+	private String nom;
+	private String prenom;
+	
+	@Email
+	private String email;
+	private String pwd;
+	private String nomComplet;
+	
+	@PrePersist
+	public void setNomComplet() {
+		this.nomComplet=nom+" "+prenom;
+	}
+}

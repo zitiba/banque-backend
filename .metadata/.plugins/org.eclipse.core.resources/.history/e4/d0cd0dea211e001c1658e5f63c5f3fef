@@ -1,0 +1,5 @@
+package bf.lonab.banque.audits;
+
+public class AuditingConfig {
+
+}

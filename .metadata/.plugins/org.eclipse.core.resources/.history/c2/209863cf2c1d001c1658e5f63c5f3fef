@@ -1,0 +1,5 @@
+package bf.lonab.banque.dao;
+
+public class RolesRepository {
+
+}

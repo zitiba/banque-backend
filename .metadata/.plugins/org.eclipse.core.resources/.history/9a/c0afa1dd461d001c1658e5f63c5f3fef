@@ -1,0 +1,8 @@
+package bf.lonab.banque.securites;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SecurityConfig {
+
+}

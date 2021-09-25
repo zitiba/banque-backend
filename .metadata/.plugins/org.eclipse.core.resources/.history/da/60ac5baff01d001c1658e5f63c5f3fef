@@ -1,0 +1,8 @@
+package bf.lonab.banque.exceptions;
+
+import bf.lonab.banque.utilitaires.Exception;
+
+public class InvalidBanqueBackendExceptions extends Exception {
+
+	
+}

@@ -1,0 +1,16 @@
+package bf.lonab.banque.audits;
+
+import java.io.Serializable;
+
+import javax.persistence.EntityListeners;
+import javax.persistence.MappedSuperclass;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+@JsonIgnoreProperties(value = {"dateCreation","dateModification"})
+public class DataAudit implements Serializable {
+
+}
